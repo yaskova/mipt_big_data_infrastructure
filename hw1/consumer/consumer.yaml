@@ -1,0 +1,22 @@
+apiVersion: apps/v1  # Указывает API-версию для создания Deployment.
+kind: Deployment  # Определяет ресурс Deployment для управления состоянием приложения.
+metadata:
+  name: consumer-deployment  # Имя Deployment, используемое для идентификации.
+spec:
+  replicas: 1  # Количество реплик приложения.
+  selector:
+    matchLabels:
+      app: consumer  # Метка для связи с подами.
+  template:  # Шаблон для создания подов.
+    metadata:
+      labels:
+        app: consumer  # Метка, назначаемая создаваемым подам.
+    spec:
+      containers:
+      - name: consumer-container  # Имя контейнера.
+        image: yaskova/consumer-spark  # Docker-образ для Spark-консьюмера. !!! Заменить на свой !!!
+        ports:
+        - containerPort: 5001  # Открытие порта 5001 внутри контейнера.
+        envFrom:
+            - configMapRef:
+                name: configs

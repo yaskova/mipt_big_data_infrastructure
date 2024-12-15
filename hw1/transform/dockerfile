@@ -1,0 +1,22 @@
+FROM openjdk:11-slim
+
+# Устанавливаем Python и другие необходимые пакеты
+RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-pip  build-essential 
+
+# Указываем рабочую директорию
+WORKDIR /app  
+
+# Копируем файл приложения в контейнер
+COPY app.py ./
+
+# Установка ClickHouse JDBC-драйвера
+ADD https://repo1.maven.org/maven2/com/clickhouse/clickhouse-jdbc/0.4.6/clickhouse-jdbc-0.4.6-all.jar ./
+
+# Устанавливаем зависимости для Python
+RUN pip3 install pyspark clickhouse-driver  # Устанавливаем библиотеки PySpark и ClickHouse Python драйвер
+
+# Устанавливаем переменные окружения
+ENV PYTHONUNBUFFERED=1  
+
+# Запускаем приложение через spark-submit                                                                                                             
+CMD ["spark-submit", "--jars", "/app/clickhouse-jdbc-0.4.6-all.jar", "/app/app.py"]

@@ -1,0 +1,30 @@
+apiVersion: apps/v1  # Указывает API-версию для создания Deployment.
+kind: Deployment  # Определяет ресурс Deployment для управления состоянием приложения.
+metadata:
+  name: connector-app  # Имя Deployment, используемое для идентификации.
+spec:
+  replicas: 1  # Количество реплик приложения.
+  selector:
+    matchLabels:
+      app: connector-app  # Метка для связи с подами.
+  template:  # Шаблон для создания подов.
+    metadata:
+      labels:
+        app: connector-app  # Метка, назначаемая создаваемым подам.
+    spec:
+      containers:
+      - name: connector-app-container  # Имя контейнера.
+        image: yaskova/python-connector  
+        ports:
+        - containerPort: 5000  # Открытие порта 5000 внутри контейнера.
+        env:  # Переменные окружения для контейнера.
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              name: secrets  # Секрет, содержащий имя пользователя PostgreSQL.
+              key: POSTGRES_USER  # Ключ в секрете для имени пользователя.
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: secrets  # Секрет, содержащий пароль PostgreSQL.
+              key: POSTGRES_PASSWORD  # Ключ в секрете для пароля.

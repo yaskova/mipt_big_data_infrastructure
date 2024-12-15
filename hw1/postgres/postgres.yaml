@@ -1,0 +1,70 @@
+apiVersion: v1  # Указывает API-версию, используемую для создания PersistentVolumeClaim.
+kind: PersistentVolumeClaim  # Тип ресурса, который запрашивает постоянное хранилище (Persistent Volume).
+metadata:
+  name: postgres-storage  # Имя PVC, по которому он будет идентифицироваться.
+spec:
+  accessModes:
+  - ReadWriteOnce  # Указывает, что том может быть смонтирован на одном узле для чтения и записи.
+  resources:
+    requests:
+      storage: 100Mi  # Запрашиваемый объем хранилища для PostgreSQL -- 100 МБ.
+---
+apiVersion: apps/v1  # Указывает API-версию, используемую для создания Deployment.
+kind: Deployment  # Определяет тип ресурса, отвечающего за управление состоянием приложения.
+metadata:
+  name: postgres  # Имя Deployment для PostgreSQL.
+  labels:
+    app: postgres  # Метка, связывающая этот Deployment с другими ресурсами.
+spec:
+  replicas: 1  # Количество экземпляров (реплик) контейнера PostgreSQL.
+  selector:
+    matchLabels:
+      app: postgres  # Указывает, что этот Deployment управляет подами с меткой "app: postgres".
+  template:  # Шаблон для создания подов.
+    metadata:
+      labels:
+        app: postgres  # Метка, применяемая к создаваемым подам.
+    spec:
+      containers:
+      - name: postgres  # Имя контейнера.
+        image: postgres:15  # Используемый образ PostgreSQL (версии 15).
+        ports:
+        - containerPort: 5432  # Открываем порт 5432 для PostgreSQL внутри контейнера.
+        env:  # Определение переменных окружения.
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              name: secrets  # Ссылка на Secret для получения имени пользователя.
+              key: POSTGRES_USER  # Ключ в Secret, содержащий имя пользователя.
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: secrets  # Ссылка на Secret для получения пароля.
+              key: POSTGRES_PASSWORD  # Ключ в Secret, содержащий пароль.
+        - name: POSTGRES_DB
+          valueFrom:
+            configMapKeyRef:
+              name: configs  # Ссылка на ConfigMap для получения имени базы данных.
+              key: POSTGRES_DB  # Ключ в ConfigMap, содержащий имя базы данных.
+
+        volumeMounts:  # Указывает, как подключать тома к контейнеру.
+        - name: postgres-storage  # Имя тома, соответствующего PVC.
+          mountPath: /var/lib/postgresql/data  # Путь внутри контейнера для хранения данных PostgreSQL.
+      volumes:  # Определение томов для подключения.
+      - name: postgres-storage  # Имя тома.
+        persistentVolumeClaim:
+          claimName: postgres-storage  # Ссылка на PVC, определенный выше.
+---
+apiVersion: v1  # Указывает API-версию, используемую для создания Service.
+kind: Service  # Определяет ресурс типа Service для доступа к подам PostgreSQL.
+metadata:
+  name: postgres-service  # Имя Service для PostgreSQL.
+  labels:
+    app: postgres  # Метка, связывающая Service с приложением PostgreSQL.
+spec:
+  type: ClusterIP  # Тип Service, доступный только внутри кластера (по умолчанию).
+  ports:
+  - port: 5432  # Порт, по которому сервис будет доступен внутри кластера.
+    targetPort: 5432  # Порт контейнера, к которому перенаправляется трафик.
+  selector:
+    app: postgres  # Указывает, что этот сервис будет связываться с подами с меткой "app: postgres".

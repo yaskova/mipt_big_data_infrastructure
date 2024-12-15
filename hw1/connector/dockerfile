@@ -1,0 +1,20 @@
+# Использование официального образа Python в качестве базового
+FROM python:3.11-slim
+
+# Установка рабочей директории
+WORKDIR /app
+
+# Установка системных зависимостей, необходимых для psycopg2
+RUN apt-get update && apt-get install -y gcc libpq-dev 
+
+# Копирование исходного кода приложения
+COPY app.py /app
+
+# Установка Python-зависимостей
+RUN pip install --no-cache-dir psycopg2 kafka-python flask simplejson  # Установка библиотек psycopg2, Kafka и Flask
+
+# Открытие порта Flask-приложения
+EXPOSE 5000 
+
+# Указание команды по умолчанию
+CMD ["python", "app.py"] 

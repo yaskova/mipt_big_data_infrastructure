@@ -1,0 +1,22 @@
+apiVersion: apps/v1  # ��������� API-������ ��� �������� Deployment.
+kind: Deployment  # ���������� ������ Deployment ��� ���������� ���������� ����������.
+metadata:
+  name: transform-deployment  # ��� Deployment, ������������ ��� �������������.
+spec:
+  replicas: 1  # ���������� ������ ����������.
+  selector:
+    matchLabels:
+      app: transform # ����� ��� ����� � ������.
+  template:  # ������ ��� �������� �����.
+    metadata:
+      labels:
+        app: transform  # �����, ����������� ����������� �����.
+    spec:
+      containers:
+      - name: transform-container  # ��� ����������.
+        image: yaskova/transform
+        ports:
+        - containerPort: 5002  # �������� ����� 5002 ������ ����������.
+        envFrom:
+            - configMapRef:
+                name: configs

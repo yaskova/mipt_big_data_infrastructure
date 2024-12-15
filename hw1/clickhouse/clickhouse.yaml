@@ -1,0 +1,71 @@
+apiVersion: apps/v1  # Указывает API-версию для создания Deployment.
+kind: Deployment  # Определяет ресурс Deployment для управления состоянием приложения.
+metadata:
+  name: clickhouse  # Имя Deployment, используемое для идентификации.
+spec:
+  replicas: 1  # Количество реплик приложения.
+  selector:
+    matchLabels:
+      app: clickhouse  # Метка для связи с подами.
+  template:  # Шаблон для создания подов.
+    metadata:
+      labels:
+        app: clickhouse  # Метка, назначаемая создаваемым подам.
+    spec:
+      containers:
+        - name: clickhouse  # Имя контейнера.
+          image: yandex/clickhouse-server:latest  # Docker-образ ClickHouse с последней версией.
+          ports:
+            - containerPort: 9000  # Порт для подключения по TCP.
+              name: tcp-port  # Название порта для удобства.
+            - containerPort: 8123  # Порт для подключения по HTTP.
+              name: http-port  # Название порта для удобства.
+          volumeMounts:  # Монтирование томов в контейнер.
+            - name: clickhouse-data
+              mountPath: /var/lib/clickhouse  # Путь, где ClickHouse хранит данные.
+      volumes:
+        - name: clickhouse-data
+          persistentVolumeClaim:
+            claimName: clickhouse-pvc  # Ссылка на PVC.
+---
+apiVersion: v1
+kind: PersistentVolumeClaim  # Ресурс для запроса на постоянное хранилище.
+metadata:
+  name: clickhouse-pvc  # Имя PVC, используемое для связи.
+spec:
+  accessModes:
+    - ReadWriteOnce  # Режим доступа к хранилищу.
+  resources:
+    requests:
+      storage: 1Gi  # Запрашиваемый объем хранилища.
+---
+apiVersion: v1
+kind: Service  # Определяет ресурс Service для доступа к ClickHouse.
+metadata:
+  name: clickhouse  # Имя Service, используемое для идентификации.
+spec:
+  selector:
+    app: clickhouse  # Указывает, что сервис связывается с подами, имеющими метку "app: clickhouse".
+  ports:
+    - protocol: TCP  # Используемый протокол TCP.
+      port: 9000  # Порт, на котором сервис будет доступен.
+      targetPort: 9000  # Порт контейнера, к которому перенаправляется трафик.
+      name: tcp  # Название порта для идентификации.
+    - protocol: TCP  # Используемый протокол TCP.
+      port: 8123  # Порт, на котором сервис будет доступен.
+      targetPort: 8123  # Порт контейнера, к которому перенаправляется трафик.
+      name: http  # Название порта для идентификации.
+  type: ClusterIP  # Тип сервиса, доступный только внутри кластера.
+---
+apiVersion: v1
+kind: PersistentVolume  # Ресурс для создания постоянного хранилища.
+metadata:
+  name: clickhouse-pv  # Имя PV.
+spec:
+  capacity:
+    storage: 1Gi  # Объем доступного хранилища.
+  accessModes:
+    - ReadWriteOnce  # Режим доступа.
+  hostPath:
+    path: /mnt/data/clickhouse  # Локальный путь на узле, где хранится данные.
+    type: DirectoryOrCreate
