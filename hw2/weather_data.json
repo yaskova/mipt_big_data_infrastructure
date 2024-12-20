@@ -1,0 +1,527 @@
+[
+    {
+        "id": 1,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:24:31"
+    },
+    {
+        "id": 2,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:24:31"
+    },
+    {
+        "id": 3,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:24:32"
+    },
+    {
+        "id": 4,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "few clouds",
+        "timestamp": "2024-12-19 20:24:32"
+    },
+    {
+        "id": 5,
+        "city": "Vladivostok",
+        "temperature": -5.74,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:24:32"
+    },
+    {
+        "id": 6,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:25:32"
+    },
+    {
+        "id": 7,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:25:32"
+    },
+    {
+        "id": 8,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:25:32"
+    },
+    {
+        "id": 9,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "few clouds",
+        "timestamp": "2024-12-19 20:25:33"
+    },
+    {
+        "id": 10,
+        "city": "Vladivostok",
+        "temperature": -5.74,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:25:33"
+    },
+    {
+        "id": 11,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:26:33"
+    },
+    {
+        "id": 12,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:26:33"
+    },
+    {
+        "id": 13,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:26:33"
+    },
+    {
+        "id": 14,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "few clouds",
+        "timestamp": "2024-12-19 20:26:34"
+    },
+    {
+        "id": 15,
+        "city": "Vladivostok",
+        "temperature": -5.74,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:26:34"
+    },
+    {
+        "id": 16,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:27:34"
+    },
+    {
+        "id": 17,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:27:34"
+    },
+    {
+        "id": 18,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:27:34"
+    },
+    {
+        "id": 19,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "few clouds",
+        "timestamp": "2024-12-19 20:27:34"
+    },
+    {
+        "id": 20,
+        "city": "Vladivostok",
+        "temperature": -5.74,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:27:35"
+    },
+    {
+        "id": 21,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:28:35"
+    },
+    {
+        "id": 22,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:28:35"
+    },
+    {
+        "id": 23,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:28:35"
+    },
+    {
+        "id": 24,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "few clouds",
+        "timestamp": "2024-12-19 20:28:36"
+    },
+    {
+        "id": 25,
+        "city": "Vladivostok",
+        "temperature": -5.74,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:28:36"
+    },
+    {
+        "id": 26,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:29:36"
+    },
+    {
+        "id": 27,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:29:37"
+    },
+    {
+        "id": 28,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:29:37"
+    },
+    {
+        "id": 29,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "few clouds",
+        "timestamp": "2024-12-19 20:29:37"
+    },
+    {
+        "id": 30,
+        "city": "Vladivostok",
+        "temperature": -5.74,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:29:37"
+    },
+    {
+        "id": 31,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:30:38"
+    },
+    {
+        "id": 32,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:30:38"
+    },
+    {
+        "id": 33,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:30:38"
+    },
+    {
+        "id": 34,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "few clouds",
+        "timestamp": "2024-12-19 20:30:38"
+    },
+    {
+        "id": 35,
+        "city": "Vladivostok",
+        "temperature": -5.74,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:30:39"
+    },
+    {
+        "id": 36,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:31:39"
+    },
+    {
+        "id": 37,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:31:39"
+    },
+    {
+        "id": 38,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:31:40"
+    },
+    {
+        "id": 39,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "few clouds",
+        "timestamp": "2024-12-19 20:31:40"
+    },
+    {
+        "id": 40,
+        "city": "Vladivostok",
+        "temperature": -5.74,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:31:40"
+    },
+    {
+        "id": 41,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:32:40"
+    },
+    {
+        "id": 42,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:32:41"
+    },
+    {
+        "id": 43,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:32:41"
+    },
+    {
+        "id": 44,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "few clouds",
+        "timestamp": "2024-12-19 20:32:41"
+    },
+    {
+        "id": 45,
+        "city": "Vladivostok",
+        "temperature": -5.74,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:32:41"
+    },
+    {
+        "id": 46,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:33:42"
+    },
+    {
+        "id": 47,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:33:42"
+    },
+    {
+        "id": 48,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:33:42"
+    },
+    {
+        "id": 49,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "few clouds",
+        "timestamp": "2024-12-19 20:33:43"
+    },
+    {
+        "id": 50,
+        "city": "Vladivostok",
+        "temperature": -5.74,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:33:43"
+    },
+    {
+        "id": 51,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:34:43"
+    },
+    {
+        "id": 52,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:34:43"
+    },
+    {
+        "id": 53,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:34:44"
+    },
+    {
+        "id": 54,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "scattered clouds",
+        "timestamp": "2024-12-19 20:34:44"
+    },
+    {
+        "id": 55,
+        "city": "Vladivostok",
+        "temperature": -6.02,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:34:44"
+    },
+    {
+        "id": 56,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:35:44"
+    },
+    {
+        "id": 57,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:35:45"
+    },
+    {
+        "id": 58,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:35:45"
+    },
+    {
+        "id": 59,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "scattered clouds",
+        "timestamp": "2024-12-19 20:35:45"
+    },
+    {
+        "id": 60,
+        "city": "Vladivostok",
+        "temperature": -6.02,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:35:46"
+    },
+    {
+        "id": 61,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:36:46"
+    },
+    {
+        "id": 62,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:36:46"
+    },
+    {
+        "id": 63,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:36:46"
+    },
+    {
+        "id": 64,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "scattered clouds",
+        "timestamp": "2024-12-19 20:36:47"
+    },
+    {
+        "id": 65,
+        "city": "Vladivostok",
+        "temperature": -6.02,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:36:47"
+    },
+    {
+        "id": 66,
+        "city": "Moscow",
+        "temperature": -5.08,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:37:47"
+    },
+    {
+        "id": 67,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:37:47"
+    },
+    {
+        "id": 68,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:37:48"
+    },
+    {
+        "id": 69,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "few clouds",
+        "timestamp": "2024-12-19 20:37:48"
+    },
+    {
+        "id": 70,
+        "city": "Vladivostok",
+        "temperature": -6.02,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:37:48"
+    },
+    {
+        "id": 71,
+        "city": "Moscow",
+        "temperature": -5.07,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:38:49"
+    },
+    {
+        "id": 72,
+        "city": "Saint Petersburg",
+        "temperature": 2.25,
+        "condition": "light intensity shower rain",
+        "timestamp": "2024-12-19 20:38:49"
+    },
+    {
+        "id": 73,
+        "city": "Krasnoyarsk",
+        "temperature": -20.78,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:38:49"
+    },
+    {
+        "id": 74,
+        "city": "Sochi",
+        "temperature": 3.05,
+        "condition": "scattered clouds",
+        "timestamp": "2024-12-19 20:38:49"
+    },
+    {
+        "id": 75,
+        "city": "Vladivostok",
+        "temperature": -6.02,
+        "condition": "overcast clouds",
+        "timestamp": "2024-12-19 20:38:50"
+    }
+]
